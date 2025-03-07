@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="student-details">
+    <h2>Student Details</h2>
+    <div class="details-container">
+      <div class="profile-photo">
+        <img src="./../../../assets/student.avif" alt="Student Photo">
+      </div>
+      <div class="details-section">
+        <h3>Personal Information</h3>
+        <p>Name: {{ student.firstName }} {{ student.lastName }}</p>
+        <p>Date of Birth: {{ student.dateOfBirth }}</p>
+        <p>Email: {{ student.email }}</p>
+        <p>Phone: {{ student.phoneNumber }}</p>
+        <p>Address: {{ student.address }}</p>
+      </div>
+    </div>
+    <a routerLink="/" class="back-button">Back to List</a>
+  </div>
+</div>

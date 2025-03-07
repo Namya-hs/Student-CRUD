@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>{{ studentID ? 'Edit' : 'Create' }} Student</h2>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <label>First Name:</label>
+    <input formControlName="firstName">
+    <label>Last Name:</label>
+    <input formControlName="lastName">
+    <label>Email:</label>
+    <input formControlName="email">
+    <label>Phone:</label>
+    <input formControlName="phoneNumber">
+    <label>DateOfBirth:</label>
+    <input formControlName="dateOfBirth">
+    <label>Address:</label>
+    <input formControlName="address">
+    <button class="btn btn-primary" type="submit">{{ studentID ? 'Update' : 'Create' }}</button>
+    <a routerLink="/" class="btn btn-danger mx-3">Cancel</a>
+  </form>
+  
+</div>
+
+

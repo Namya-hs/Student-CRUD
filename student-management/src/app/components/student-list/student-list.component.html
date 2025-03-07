@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Student List</h2>
+  <div class="student-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+     
+        <tr *ngFor="let student of students">
+          <td>{{ student.firstName }} {{ student.lastName }}</td>
+          <td>{{ student.dateOfBirth | date: 'longDate' }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.phoneNumber }}</td>
+          <td>{{ student.address }}</td>
+          <td>
+            <button class="btn btn-primary" [routerLink]="['/students', student.studentID]">View</button>
+            <button class="btn btn-secondary" [routerLink]="['/student-form', student.studentID]">Edit</button>
+            <button class="btn btn-danger" (click)="deleteStudent(student.studentID!)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a routerLink="/student-form" class="add-student-button">Add Student</a>
+  </div>
+  <div class="text-center" >
+    <img class="img img-fluid" style="width: 100%; height: 300px;" src="../../../assets/Happy student-amico.svg" alt="">
+  </div>
+</div>

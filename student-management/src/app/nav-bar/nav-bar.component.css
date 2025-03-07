@@ -1,0 +1,10 @@
+nav {
+    background-color: #007bff;
+    padding: 1rem;
+  }
+  
+  nav p {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+  }

@@ -1,0 +1,17 @@
+.student-form {
+    margin-top: 1rem;
+  }
+  
+  .student-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .student-form label {
+    margin-top: 0.5rem;
+  }
+  
+  .student-form button {
+    align-self: flex-start;
+    margin-top: 1rem;
+  }
